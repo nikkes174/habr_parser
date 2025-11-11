@@ -51,10 +51,16 @@ class HTMLParser(BaseParser):
         )
 
         for i, article in enumerate(articles, start=1):
-            title: str = (article.find("a", class_=self.selector).text.strip()
-                          if article.find("a", class_=self.selector)
-                          else "Без названия")
-            views: str = (article.find("span", class_="tm-icon-counter__value").text.strip()
-                          if article.find("span", class_="tm-icon-counter__value")
-                          else "—")
+            title: str = (
+                article.find("a", class_=self.selector).text.strip()
+                if article.find("a", class_=self.selector)
+                else "Без названия"
+            )
+            views: str = (
+                article.find(
+                    "span", class_="tm-icon-counter__value"
+                ).text.strip()
+                if article.find("span", class_="tm-icon-counter__value")
+                else "—"
+            )
             print(f'{i}. {title} | Просмотры: {views}')

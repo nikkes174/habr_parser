@@ -1,8 +1,10 @@
+import os
+import sys
 from typing import Any
 from unittest.mock import MagicMock, patch
-import sys
-import os
+
 import pytest
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 from parsing_service import HTMLParser
 

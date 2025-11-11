@@ -39,6 +39,10 @@ jobs:
         run: |
           poetry install --no-interaction --no-root
 
+      - name: Format code with black
+        run: |
+          poetry run black .
+
       - name: Lint with flake8
         run: |
           poetry run flake8 .
