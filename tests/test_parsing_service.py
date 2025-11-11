@@ -6,6 +6,7 @@ from unittest.mock import MagicMock, patch
 import pytest
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
 from parsing_service import HTMLParser
 
 
