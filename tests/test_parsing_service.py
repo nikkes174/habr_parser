@@ -10,8 +10,6 @@ from parsing_service import HTMLParser
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 
-
-
 @patch(
     "builtins.input", side_effect=["https://habr.com/ru/articles/top/daily/"]
 )
